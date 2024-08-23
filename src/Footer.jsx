@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className=" h-small-footer md:h-header-footer flex justify-center items-center">
-      <ol className="text-size-footer text-color-footer w-small-footer-ol h-small-footer-ol md:w-img md:h-img md:list-none flex gap-2 flex-col md:flex-row justify-evenly md:items-center">
+      <ol className="text-size-footer text-white-1 w-[300px] h-[120px] flex gap-2 flex-col md:w-[100%] md:h-[100%] md:list-none md:flex-row justify-evenly md:items-center">
         <li>POLITIQUE DE CONFIDENTIALITÉ</li>
         <li>CONDITIONS GÉNÉRALES D'UTILISATION</li>
         <li>RÉGLEMENTATION - LOI AGEC</li>
