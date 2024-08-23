@@ -1,7 +1,13 @@
+import Content from "./Content";
+import Footer from "./Footer";
+import Header from "./Header";
+
 function App() {
   return (
     <>
-      <p className="text-red-600">Hello</p>
+      <Header />
+      <Content />
+      <Footer />
     </>
   );
 }
