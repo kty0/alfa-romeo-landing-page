@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a technical test for a Front End Developer position at Hipto. The task is to create a dynamic landing page with a form and send the collected data via an API.
+This project is a technical test for an intern Front End Developer position at Hipto. The task is to create a dynamic landing page with a form and send the collected data via an API.
 
 ## Technologies Used
 
