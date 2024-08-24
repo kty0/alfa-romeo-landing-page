@@ -11,12 +11,40 @@ function App() {
   const [lastName, setLastName] = useState("");
   const [firstName, setFirstName] = useState("");
   const [city, setCity] = useState("");
+  const [postCode, setPostCode] = useState("");
   const [phone, setPhone] = useState("");
+  const [dataCollected, setDataCollected] = useState(false);
+
+  if (dataCollected) {
+    console.log("data Collected!");
+  } else {
+    console.log("data not collected yet");
+    console.log("typeMode : " + typeModel);
+    console.log("buyOrLease : " + buyOrLease);
+    console.log("newOrRental : " + newOrRental);
+    console.log("duration : " + duration);
+    console.log("lastName : " + lastName);
+    console.log("firstName : " + firstName);
+    console.log("city : " + city);
+    console.log("postCode : " + postCode);
+    console.log("phone : " + phone);
+  }
 
   return (
     <>
       <Header />
-      <Content />
+      <Content
+        setTypeModel={setTypeModel}
+        setBuyOrLease={setBuyOrLease}
+        setNewOrRental={setNewOrRental}
+        setDuration={setDuration}
+        setLastName={setLastName}
+        setFirstName={setFirstName}
+        setPostCode={setPostCode}
+        setPhone={setPhone}
+        setDataCollected={setDataCollected}
+        buyOrLease={buyOrLease}
+      />
       <Footer />
     </>
   );
