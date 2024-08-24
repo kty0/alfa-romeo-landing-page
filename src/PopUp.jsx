@@ -62,14 +62,7 @@ function PopUp(props) {
                 postCodeCorrect={data}
                 setPopUp={props.setPopUp}
                 setForm4={props.setForm4}
-                typeModel={props.typeModel}
-                buyOrLease={props.buyOrLease}
-                newOrRental={props.newOrRental}
-                duration={props.duration}
-                firstName={props.firstName}
-                lastName={props.lastName}
-                city={props.city}
-                phone={props.phone}
+                setDataReady={props.setDataReady}
               />
             </div>
           </div>

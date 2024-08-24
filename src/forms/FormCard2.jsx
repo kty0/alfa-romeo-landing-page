@@ -7,7 +7,7 @@ function FormCard2(props) {
         <p className="text-white-1 text-[16px] md:text-[24px] font-semibold w-[86%] md:w-[500px] m-auto md:ml-[40px] pt-[37px]">
           Vous êtes intéressé par ?
         </p>
-        <ol className="text-white-1 text-[16px] mt-[15px]  mb-[20px]">
+        <ol className="text-white-1 text-[16px] mt-[15px]  mb-[40px]">
           <Choice
             name="UN ACHAT"
             setData={props.data.data.setBuyOrLease}

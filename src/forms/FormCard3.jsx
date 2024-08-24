@@ -8,7 +8,7 @@ function FormCard3(props) {
           <p className="text-white-1 text-[16px] md:text-[24px] font-semibold w-[86%] md:w-[500px] m-auto md:ml-[40px] pt-[37px]">
             Pour quel type de véhicule ?
           </p>
-          <ol className="text-white-1 text-[16px] mt-[15px] mb-[20px]">
+          <ol className="text-white-1 text-[16px] mt-[15px] mb-[40px]">
             <Choice
               name="NEUF"
               setData={props.data.data.setNewOrRental}
@@ -30,7 +30,7 @@ function FormCard3(props) {
           <p className="text-white-1 text-[16px] md:text-[24px] font-semibold w-[86%] md:w-[500px] m-auto md:ml-[40px] pt-[37px]">
             Pour quelle durée ?
           </p>
-          <ol className="text-white-1 text-[16px] mt-[15px] mb-[20px]">
+          <ol className="text-white-1 text-[16px] mt-[15px] mb-[40px]">
             <Choice
               name="6 MOIS"
               setData={props.data.data.setDuration}
