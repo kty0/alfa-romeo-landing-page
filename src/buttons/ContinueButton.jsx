@@ -3,7 +3,6 @@ function ContinueButton(props) {
     console.log(props.phone);
 
     if (props.firstName && props.lastName && props.phone && props.postCode) {
-      //all valide
       props.setPopUp(true);
     } else {
       alert("Veuillez remplir tous les informations");

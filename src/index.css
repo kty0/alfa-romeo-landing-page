@@ -18,9 +18,3 @@
     background-size: 600px;
   }
 }
-
-.pop-up {
-  :root {
-    backdrop-filter: blur(10px);
-  }
-}

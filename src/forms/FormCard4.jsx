@@ -1,11 +1,8 @@
 import { useState } from "react";
 import ContinueButton from "../buttons/ContinueButton";
-import Choice from "./Choice";
 import ContactInput from "./ContactInput";
-import PopUp from "../PopUp";
 
 function FormCard4(props) {
-  console.log(props);
   const [firstNameValid, setFirstNameValid] = useState(false);
   const [lastNameValid, setLastNameValid] = useState(false);
   const [postCodeValid, setPostCodeValid] = useState(false);

@@ -73,8 +73,6 @@ function Form(props) {
       />
     );
   }
-
-  // The collection of data should be completed here
 }
 
 export default Form;
