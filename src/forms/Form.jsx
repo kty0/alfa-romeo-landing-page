@@ -8,7 +8,6 @@ function Form(props) {
   const [form1, setForm1] = useState(false);
   const [form2, setForm2] = useState(false);
   const [form3, setForm3] = useState(false);
-  const [form4, setForm4] = useState(false);
 
   if (!form1) {
     return (
@@ -16,11 +15,11 @@ function Form(props) {
         form1={form1}
         form2={form2}
         form3={form3}
-        form4={form4}
+        form4={props.data.form4}
         setForm1={setForm1}
         setForm2={setForm2}
         setForm3={setForm3}
-        setForm4={setForm4}
+        setForm4={props.data.setForm4}
         data={props}
       />
     );
@@ -32,11 +31,11 @@ function Form(props) {
         form1={form1}
         form2={form2}
         form3={form3}
-        form4={form4}
+        form4={props.data.form4}
         setForm1={setForm1}
         setForm2={setForm2}
         setForm3={setForm3}
-        setForm4={setForm4}
+        setForm4={props.data.setForm4}
         data={props}
       />
     );
@@ -48,36 +47,31 @@ function Form(props) {
         form1={form1}
         form2={form2}
         form3={form3}
-        form4={form4}
+        form4={props.data.form4}
         setForm1={setForm1}
         setForm2={setForm2}
         setForm3={setForm3}
-        setForm4={setForm4}
+        setForm4={props.data.setForm4}
         data={props}
       />
     );
   }
 
-  if (!form4) {
+  console.log(props);
+  if (!props.data.form4) {
     return (
       <FormCard4
         form1={form1}
         form2={form2}
         form3={form3}
-        form4={form4}
+        form4={props.data.form4}
         setForm1={setForm1}
         setForm2={setForm2}
         setForm3={setForm3}
-        setForm4={setForm4}
+        setForm4={props.data.setForm4}
         data={props}
       />
     );
-  }
-
-  if (form4) {
-    props.setDataCollected(true);
-  } else {
-    console.log("Something went wrong");
   }
 
   // The collection of data should be completed here

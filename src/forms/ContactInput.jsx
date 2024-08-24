@@ -16,7 +16,7 @@ function ContactInput(props) {
   };
 
   const setData = (event) => {
-    console.log(props.postCode && event.target.validity.valid);
+    console.log("tel:" + props.tel && event.target.value.length);
     if (props.postCode && event.target.validity.valid) {
       props.setData(event.target.value);
       if (event.target.value.length != 5) {
@@ -27,7 +27,7 @@ function ContactInput(props) {
     } else if (props.tel && event.target.value.length == 10) {
       props.setData(formatE164E(event.target.value));
       props.dataValid(true);
-    } else if (props.tel && event.target.value.length != 10) {
+    } else if (props.tel && event.target.value.length < 10) {
       props.dataValid(false);
     } else if (!props.postCode && !props.tel) {
       props.setData(event.target.value);
