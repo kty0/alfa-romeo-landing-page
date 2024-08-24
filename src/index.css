@@ -9,8 +9,6 @@
   background-color: #1b1f2a;
 }
 
-/* xl:bg-background-1 bg-background-2 h-img w-img bg-no-repeat bg-center bg-cover"> */
-
 @media only screen and (max-width: 768px) {
   :root {
     background-image: url("../public/background-phone.png");
