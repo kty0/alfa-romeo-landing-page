@@ -1,7 +1,5 @@
 function ContinueButton(props) {
   const Continue = () => {
-    console.log(props.phone);
-
     if (props.firstName && props.lastName && props.phone && props.postCode) {
       props.setPopUp(true);
     } else {

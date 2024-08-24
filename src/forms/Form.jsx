@@ -57,7 +57,6 @@ function Form(props) {
     );
   }
 
-  console.log(props);
   if (!props.data.form4) {
     return (
       <FormCard4
