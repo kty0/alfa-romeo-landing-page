@@ -6,7 +6,6 @@ function ContactInput(props) {
 
   const formatE164E = (phone) => {
     const phoneSplit = phone.match(/.{1,2}/g);
-    console.log(phoneSplit);
     let phoneBuffer = "+33 " + phoneSplit[0][1];
     phoneSplit.shift();
     for (const i of phoneSplit) {
@@ -16,7 +15,6 @@ function ContactInput(props) {
   };
 
   const setData = (event) => {
-    console.log("tel:" + props.tel && event.target.value.length);
     if (props.postCode && event.target.validity.valid) {
       props.setData(event.target.value);
       if (event.target.value.length != 5) {
@@ -36,7 +34,6 @@ function ContactInput(props) {
   };
 
   const formatPostCode = (event) => {
-    console.log(event.target.value);
     const postCodeBuffer = event.target.validity.valid
       ? event.target.value
       : postCode;
@@ -44,13 +41,10 @@ function ContactInput(props) {
   };
 
   const formatFormPhone = (event) => {
-    console.log(event.target.value);
     const phoneBuffer = event.target.validity.valid
       ? event.target.value
       : phone;
     setPhone(phoneBuffer);
-    console.log("after set" + phone.length);
-    console.log(typeof phone);
   };
 
   if (props.postCode) {

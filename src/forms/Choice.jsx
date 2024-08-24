@@ -1,10 +1,8 @@
 function Choice(props) {
-  console.log(props);
   const setData = () => {
     if (!props.date) {
       props.setData(props.name);
     } else {
-      console.log(Number(props.name.split(" ")[0]));
       props.setData(Number(props.name.split(" ")[0]) + "M");
     }
     props.formCheck(true);

@@ -7,7 +7,6 @@ import axios from "axios";
 
 function App() {
   const em = "cathy.nguyen.75013@gmail.com";
-  const em2 = "alt.e2-bofwwqez@yopmail.com";
   const url = `https://hooks.zapier.com/hooks/catch/16422019/37w62x0?em=${em}`;
 
   const [typeModel, setTypeModel] = useState("");
@@ -37,9 +36,10 @@ function App() {
           telephone: phone,
         },
       };
-      console.log("Sending data:", data);
 
       if (dataReady) {
+        console.log("Sending data:", data);
+
         await axios
           .post(url, data, {
             headers: {
@@ -70,18 +70,6 @@ function App() {
     phone,
     url,
   ]);
-
-  console.log("data not collected yet");
-  console.log("typeMode : " + typeModel);
-  console.log("buyOrLease : " + buyOrLease);
-  console.log("newOrRental : " + newOrRental);
-  console.log("duration : " + duration);
-  console.log("lastName : " + lastName);
-  console.log("firstName : " + firstName);
-  console.log("city : " + city);
-  console.log("postCode : " + postCode);
-  console.log("phone : " + phone);
-  console.log("popup ? : " + popUp);
 
   return (
     <>

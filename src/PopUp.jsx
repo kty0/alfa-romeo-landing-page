@@ -8,9 +8,6 @@ function PopUp(props) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  console.log(props.postCode);
-  console.log(`https://geo.api.gouv.fr/communes?codePostal=${props.postCode}`);
-
   useEffect(() => {
     const fetchData = async () => {
       if (!props.postCode) {
@@ -26,7 +23,6 @@ function PopUp(props) {
         const response = await axios.get(
           `https://geo.api.gouv.fr/communes?codePostal=${props.postCode}`
         );
-        console.log("Réponse de l'API:", response.data);
         setData(response.data);
         if (response.data.length != 0) {
           props.setCity(response.data[0].nom);
