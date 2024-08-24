@@ -1,9 +1,6 @@
-import FormCard2 from "./FormCard2";
 import Choice from "./Choice";
 
 function FormCard1(props) {
-  console.log(props);
-
   if (!props.form1) {
     return (
       <div className="w-[340px] m-auto bg-forms overflow-y-scroll md:overflow-y-hidden backdrop-blur-md rounded-[10px] mt-[50px] md:w-[618px] md:h-[428px] md:ml-[65px]">

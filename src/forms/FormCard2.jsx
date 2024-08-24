@@ -1,8 +1,6 @@
 import Choice from "./Choice";
 
 function FormCard2(props) {
-  console.log(props);
-
   if (!props.form2) {
     return (
       <div className="w-[340px] m-auto bg-forms overflow-y-scroll md:overflow-hidden backdrop-blur-md rounded-[10px] mt-[50px] md:w-[618px] md:ml-[65px]">
