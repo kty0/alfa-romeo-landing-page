@@ -28,6 +28,9 @@ function PopUp(props) {
         );
         console.log("Réponse de l'API:", response.data);
         setData(response.data);
+        if (response.data.length != 0) {
+          props.setCity(response.data[0].nom);
+        }
       } catch (error) {
         console.error("Erreur lors de la récupération des données:", error);
       } finally {
@@ -59,6 +62,14 @@ function PopUp(props) {
                 postCodeCorrect={data}
                 setPopUp={props.setPopUp}
                 setForm4={props.setForm4}
+                typeModel={props.typeModel}
+                buyOrLease={props.buyOrLease}
+                newOrRental={props.newOrRental}
+                duration={props.duration}
+                firstName={props.firstName}
+                lastName={props.lastName}
+                city={props.city}
+                phone={props.phone}
               />
             </div>
           </div>

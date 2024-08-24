@@ -37,6 +37,15 @@ function App() {
           setCity={setCity}
           setPopUp={setPopUp}
           setForm4={setForm4}
+          // to send the lead
+          typeModel={typeModel}
+          buyOrLease={buyOrLease}
+          newOrRental={newOrRental}
+          duration={duration}
+          firstName={firstName}
+          lastName={lastName}
+          city={city}
+          phone={phone}
         />
       )}
       <Header />
