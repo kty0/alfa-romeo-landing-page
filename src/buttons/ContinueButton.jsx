@@ -9,7 +9,7 @@ function ContinueButton(props) {
     }
   };
   return (
-    <div className="grid place-items-center mt-[20px] mb-[50px]">
+    <div className="grid place-items-center mt-[50px] mb-[50px]">
       <button
         onClick={Continue.bind(this)}
         className="font-medium text-white text-[20px] rounded-[20px] w-[210px] h-[56px] bg-[#E82127] mx-auto"
