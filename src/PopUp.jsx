@@ -4,7 +4,6 @@ import ContinueButton2 from "./buttons/ContinueButton2";
 import axios from "axios";
 
 function PopUp(props) {
-  //useffect to gather city
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
