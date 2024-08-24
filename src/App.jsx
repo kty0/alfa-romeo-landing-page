@@ -11,6 +11,7 @@ function App() {
   const [lastName, setLastName] = useState("");
   const [firstName, setFirstName] = useState("");
   const [city, setCity] = useState("");
+  const [postCode, setPostCode] = useState("");
   const [phone, setPhone] = useState("");
   const [dataCollected, setDataCollected] = useState(false);
 
@@ -25,6 +26,7 @@ function App() {
     console.log("lastName : " + lastName);
     console.log("firstName : " + firstName);
     console.log("city : " + city);
+    console.log("postCode : " + postCode);
     console.log("phone : " + phone);
   }
 
@@ -38,7 +40,7 @@ function App() {
         setDuration={setDuration}
         setLastName={setLastName}
         setFirstName={setFirstName}
-        setCity={setCity}
+        setPostCode={setPostCode}
         setPhone={setPhone}
         setDataCollected={setDataCollected}
         buyOrLease={buyOrLease}
