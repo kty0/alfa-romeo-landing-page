@@ -11,7 +11,7 @@ function FormCard4(props) {
   const [phoneValid, setPhoneValid] = useState(false);
   if (!props.form4) {
     return (
-      <div className="w-[340px] m-auto bg-forms overflow-y-scroll backdrop-blur-md rounded-[10px] mt-[50px] md:w-[618px] md:ml-[65px]">
+      <div className="w-[340px] m-auto bg-forms overflow-y-scroll md:overflow-hidden backdrop-blur-md rounded-[10px] mt-[50px] md:w-[618px] md:ml-[65px]">
         <p className="text-white-1 text-[16px] md:text-[24px] font-semibold w-[86%] md:w-[500px] m-auto md:ml-[40px] pt-[37px] mb-[20px]">
           Vos coordonnées :
         </p>
