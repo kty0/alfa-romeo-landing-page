@@ -1,9 +1,23 @@
 function ContinueButton(props) {
   const Continue = () => {
+    let alertMessage = "Veuillez verifier les informations suivants :";
+
+    if (!props.firstName) {
+      alertMessage = alertMessage + " Prénom";
+    }
+    if (!props.lastName) {
+      alertMessage = alertMessage + " Nom";
+    }
+    if (!props.postCode) {
+      alertMessage = alertMessage + " Code postal";
+    }
+    if (!props.phone) {
+      alertMessage = alertMessage + " Téléphone";
+    }
     if (props.firstName && props.lastName && props.phone && props.postCode) {
       props.setPopUp(true);
     } else {
-      alert("Veuillez remplir tous les informations");
+      alert(alertMessage);
     }
   };
   return (

@@ -5,6 +5,8 @@ function ContactInput(props) {
   const [phone, setPhone] = useState("");
 
   const formatE164E = (phone) => {
+    phone = phone.replace(/\s/g, ""); // Remove any spaces first
+
     const phoneSplit = phone.match(/.{1,2}/g);
     let phoneBuffer = "+33 " + phoneSplit[0][1];
     phoneSplit.shift();
@@ -22,10 +24,13 @@ function ContactInput(props) {
       } else {
         props.dataValid(true);
       }
-    } else if (props.tel && event.target.value.length == 10) {
+    } else if (
+      props.tel &&
+      event.target.value.replace(/\s/g, "").length == 10
+    ) {
       props.setData(formatE164E(event.target.value));
       props.dataValid(true);
-    } else if (props.tel && event.target.value.length < 10) {
+    } else if (props.tel && event.target.value.replace(/\s/g, "").length < 10) {
       props.dataValid(false);
     } else if (!props.postCode && !props.tel) {
       props.setData(event.target.value);
@@ -41,9 +46,12 @@ function ContactInput(props) {
   };
 
   const formatFormPhone = (event) => {
-    const phoneBuffer = event.target.validity.valid
-      ? event.target.value
-      : phone;
+    let pattern = new RegExp("^(0?|0[67]\\d{0,8})$");
+    let phoneBuffer = event.target.value.replace(/\s/g, ""); // Remove any spaces first
+    phoneBuffer = pattern.test(phoneBuffer)
+      ? (phoneBuffer = phoneBuffer.match(/.{1,2}/g)?.join(" ") || "")
+      : (phoneBuffer = phone);
+
     setPhone(phoneBuffer);
   };
 
@@ -78,7 +86,6 @@ function ContactInput(props) {
           <input
             type="tel"
             inputMode="numeric"
-            pattern="^(\d{1,2}){0,5}"
             onInput={formatFormPhone.bind(this)}
             onChange={setData.bind(this)}
             value={phone}
