@@ -1,8 +1,8 @@
-# Hipto Technical Test
+# Alfa Romeo landing page
 
 ## Description
 
-This project is a technical test for an intern Front End Developer position at Hipto. The task is to create a dynamic landing page with a form and send the collected data via an API.
+This project consists of developing a dynamic landing page with a form to collect and submit user data through an API. 
 
 ## Technologies Used
 
